@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Produk Unggulan</title>
+    <!-- AOS Animation -->
+    <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+    <link rel="stylesheet" href="../dist/output.css">
+</head>
+
+<body class="font-inter bg-blue-900 text-white">
+    <div id="navbar-container"></div>
+
+    <!-- PRODUK SECTION -->
+    <section id="produk" class="py-20 px-4 sm:px-6 lg:px-8 bg-blue-900 text-center">
+
+        <h2 class="reveal-item font-montserrat uppercase font-black text-white text-xl md:text-4xl leading-tight tracking-[-0.02em] mb-4"
+            data-aos="fade-down">
+            Produk
+        </h2>
+
+        <p class="mt-3 text-white font-inter text-md" data-aos="fade-up" data-aos-delay="200">
+            Pilihan terbaik untuk kesehatan, kecantikan, dan gaya hidup modern.
+        </p>
+
+        <div id="produk-list" class="mt-12 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+            <!-- Produk akan di-generate via JS -->
+        </div>
+
+    </section>
+    <div id="footer-container"></div>
+    <!-- AOS JS -->
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+
+    <!-- Script Produk -->
+    <script src="../assets/js/produk.js"></script>
+    <script src="../assets/js/main.js"></script>
+
+    <script>
+        AOS.init({
+            once: true,
+            duration: 600,
+            easing: "ease-out-cubic"
+        });
+    </script>
+
+</body>
+
+</html>

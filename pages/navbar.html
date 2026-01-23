@@ -1,0 +1,65 @@
+<header class="fixed top-0 left-0 w-full z-[9999]
+           flex items-center px-6 h-16
+           bg-white border-b border-black">
+
+    <!-- Brand -->
+    <div class="flex items-center gap-2 flex-1 text-lg">
+        <img src="/assets/img/logo.png" alt="PT Bass Logo" class="w-15 h-auto">
+        <span class="text-black font-poppins font-medium">
+            AutoSukses<span class="text-yellow-500 font-inter font-md">2u</span>
+        </span>
+    </div>
+
+    <!-- Desktop Nav -->
+    <nav class="hidden md:flex flex-1 justify-center gap-10 font-medium text-black font-poppins">
+        <a href="/index.html" class="nav-link">Home</a>
+        <a href="/pages/about.html" class="nav-link">Tentang</a>
+        <a href="/pages/products.html" class="nav-link">Produk</a>
+        <a href="/pages/marketing-plan.html" class="nav-link">Marketing Plan</a>
+    </nav>
+
+    <!-- Desktop Login -->
+    <div class="hidden md:flex flex-1 justify-end mr-6">
+        <a href="/pages/member-login.html"
+            class="flex items-center gap-1 px-5 py-2 bg-yellow-500 rounded text-white font-poppins">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-auto" fill="none" viewBox="0 0 24 24"
+                stroke="currentColor" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round"
+                    d="M15.75 6.75a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0z" />
+                <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 20.25a7.5 7.5 0 0115 0" />
+            </svg>
+            <span>Login</span>
+        </a>
+    </div>
+
+    <!-- Hamburger -->
+    <button id="menu-btn" class="md:hidden text-black text-2xl z-50">
+        ☰
+    </button>
+
+    <!-- Mobile Sidebar -->
+    <aside id="mobile-menu" class="fixed top-0 left-0 h-full w-64 bg-white
+               transform -translate-x-full
+               transition-transform duration-300 ease-out
+               md:hidden z-40 p-6
+               flex flex-col font-poppins text-black">
+
+        <div class="mb-10">
+            <h3 class="text-lg tracking-wide">Menu</h3>
+            <div class="mt-4 h-px w-full bg-yellow-500"></div>
+        </div>
+
+        <nav class="flex flex-col gap-6">
+            <a href="/index.html" class="mobile-link">Home</a>
+            <a href="/pages/about.html" class="mobile-link">Tentang</a>
+            <a href="/pages/products.html" class="mobile-link">Produk</a>
+            <a href="/pages/marketing-plan.html" class="mobile-link">Marketing Plan</a>
+        </nav>
+
+        <a href="/pages/member-login.html"
+           class="mt-10 bg-yellow-500 text-center py-2 rounded text-white font-poppins">
+            Login Member
+        </a>
+    </aside>
+
+</header>
