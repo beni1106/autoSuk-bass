@@ -1,11 +1,6 @@
 document.addEventListener("DOMContentLoaded", () => {
-
-        /* ================= PATH DETECTION ================= */
-    const isRoot = location.pathname.endsWith("index.html") || location.pathname.endsWith("/");
-    const basePath = isRoot ? "." : "..";
-
     /* ================= NAVBAR ================= */
-    fetch(`${basePath}/pages/navbar.html`)
+    fetch("navbar.html")
         .then(res => res.text())
         .then(html => {
             const container = document.getElementById("navbar-container");
@@ -44,7 +39,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
     /* ================= FOOTER ================= */
-    fetch(`${basePath}/pages/footer.html`)
+    fetch("footer.html")
         .then(res => res.text())
         .then(html => {
             const container = document.getElementById("footer-container");
