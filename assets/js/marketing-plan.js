@@ -1,5 +1,5 @@
 const images = Array.from({ length: 19 }, (_, i) =>
-    `../assets/images-marketing/${i + 1}.webp`
+    `assets/images-marketing/${i + 1}.webp`
 );
 
 const container = document.getElementById("marketing-images");
