@@ -94,6 +94,7 @@
         text-transform: uppercase;
         font-weight: 900;
         color: white;
+
         opacity: 0;
         transform: translateY(20px);
         transition:
@@ -105,6 +106,13 @@
         opacity: 1;
         transform: translateY(0);
     }
+
+    .hero-line.show {
+        opacity: 1;
+        transform: translate3d(0, 0, 0);
+        transition: transform 600ms ease-out, opacity 600ms ease-out;
+    }
+
 
     /* ================= REVEAL SECTION ================= */
     .reveal-item {
