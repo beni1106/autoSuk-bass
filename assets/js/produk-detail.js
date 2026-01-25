@@ -187,7 +187,7 @@ if (!produk) {
     container.innerHTML = `
         <h1 class="reveal-item font-montserrat uppercase font-black text-white text-xl md:text-4xl leading-tight tracking-[-0.02em] mb-4">${produk.title}</h1>
 
-        <img src="../assets/img/${produk.image}"
+        <img src="assets/img/${produk.image}"
              class="mx-auto max-h-96 object-contain"
              alt="${produk.title}">
 

@@ -1,11 +1,11 @@
 const produkList = [
-    { slug: "botani", webp: "../assets/img/Produk_Botani.webp", title: "Botani" },
-    { slug: "eikana", webp: "../assets/img/Produk_Eikana.webp", title: "Eikana" },
-    { slug: "gilcampropolis", webp: "../assets/img/Produk_Gilcam_Propolis.webp", title: "Gilcam Propolis" },
-    { slug: "kopidongkrak", webp: "../assets/img/Produk_Kopi_Dongkrak.webp", title: "Kopi Dongkrak" },
-    { slug: "ordinate", webp: "../assets/img/Produk_Ordinate.webp", title: "Ordinate" },
-    { slug: "bioVIT", webp: "../assets/img/Produk_BioVIT.webp", title: "BioVIT" },
-    { slug: "bioLIFE", webp: "../assets/img/Produk_BioLIFE.webp", title: "BioLIFE" },
+    { slug: "botani", webp: "assets/img/Produk_Botani.webp", title: "Botani" },
+    { slug: "eikana", webp: "assets/img/Produk_Eikana.webp", title: "Eikana" },
+    { slug: "gilcampropolis", webp: "assets/img/Produk_Gilcam_Propolis.webp", title: "Gilcam Propolis" },
+    { slug: "kopidongkrak", webp: "assets/img/Produk_Kopi_Dongkrak.webp", title: "Kopi Dongkrak" },
+    { slug: "ordinate", webp: "assets/img/Produk_Ordinate.webp", title: "Ordinate" },
+    { slug: "bioVIT", webp: "assets/img/Produk_BioVIT.webp", title: "BioVIT" },
+    { slug: "bioLIFE", webp: "assets/img/Produk_BioLIFE.webp", title: "BioLIFE" },
 ];
 
 

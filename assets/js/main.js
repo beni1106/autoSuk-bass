@@ -144,4 +144,42 @@ document.addEventListener("DOMContentLoaded", () => {
 
     revealItems.forEach(item => itemObserver.observe(item));
 
+    /* ================= LAZY IMAGE ================= */
+    const images = document.querySelectorAll(".lazy-img");
+
+    const imageObserver = new IntersectionObserver((entries, obs) => {
+        entries.forEach(entry => {
+            if (!entry.isIntersecting) return;
+
+            const img = entry.target;
+
+            if (img.complete) {
+                img.classList.add("loaded");
+            } else {
+                img.addEventListener("load", () => {
+                    img.classList.add("loaded");
+                }, { once: true });
+            }
+
+            obs.unobserve(img);
+        });
+    }, {
+        threshold: 0.1,
+        rootMargin: "0px 0px 100px 0px"
+    });
+
+    images.forEach(img => imageObserver.observe(img));
+
+    const heroImg = document.querySelector(".hero-img");
+
+    if (heroImg) {
+        if (heroImg.complete) {
+            heroImg.classList.add("loaded");
+        } else {
+            heroImg.addEventListener("load", () => {
+                heroImg.classList.add("loaded");
+            }, { once: true });
+        }
+    }
+
 });
