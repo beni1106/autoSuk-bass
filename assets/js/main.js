@@ -24,19 +24,19 @@ document.addEventListener("DOMContentLoaded", () => {
             menuBtn.addEventListener("click", () => {
                 isOpen = !isOpen;
                 mobileMenu.classList.toggle("-translate-x-full");
+                document.body.classList.toggle("overflow-hidden", isOpen);
                 menuBtn.textContent = isOpen ? "✕" : "☰";
             });
-
             document.querySelectorAll("#mobile-menu a").forEach(link => {
                 link.addEventListener("click", () => {
                     mobileMenu.classList.add("-translate-x-full");
+                    document.body.classList.remove("overflow-hidden");
                     menuBtn.textContent = "☰";
                     isOpen = false;
                 });
             });
         })
         .catch(err => console.error("Navbar load error:", err));
-
 
     /* ================= FOOTER ================= */
     fetch("footer.html")

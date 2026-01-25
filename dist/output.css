@@ -388,12 +388,16 @@
 
     .nav-link:after {
         content: "";
-        background-color: var(--color-accent);
-        width: 0;
+        bottom: calc(var(--spacing)*-1);
         height: 2px;
-        transition: width .25s;
+        width: calc(var(--spacing)*0);
+        background-color: var(--color-yellow-400);
+        transition-property: all;
+        transition-timing-function: var(--tw-ease, var(--default-transition-timing-function));
+        transition-duration: var(--tw-duration, var(--default-transition-duration));
+        --tw-duration: .3s;
+        transition-duration: .3s;
         position: absolute;
-        bottom: -4px;
         left: 50%;
         transform: translate(-50%)
     }
@@ -412,8 +416,10 @@
         transition-duration: var(--tw-duration, var(--default-transition-duration))
     }
 
-    .mobile-link:hover {
-        color: var(--color-accent)
+    @media (hover:hover) {
+        .mobile-link:hover {
+            color: var(--color-yellow-400)
+        }
     }
 }
 
@@ -454,16 +460,16 @@
         left: calc(var(--spacing)*4)
     }
 
-    .z-40 {
-        z-index: 40
-    }
-
     .z-50 {
         z-index: 50
     }
 
     .z-\[9999\] {
         z-index: 9999
+    }
+
+    .z-\[10000\] {
+        z-index: 10000
     }
 
     .container {
@@ -1133,10 +1139,6 @@
         transition-timing-function: var(--ease-out)
     }
 
-    .will-change-transform {
-        will-change: transform
-    }
-
     @media (hover:hover) {
         .hover\:scale-105:hover {
             --tw-scale-x: 105%;
@@ -1258,41 +1260,58 @@
 
     @keyframes navbarFade {
         0% {
-            opacity: 0;
-            transform: translateY(-6px)
+            opacity: 0
         }
 
         to {
-            opacity: 1;
-            transform: translateY(0)
+            opacity: 1
         }
     }
 
+    body {
+        overflow-x: hidden
+    }
+
     .animate-navbar {
-        animation: .25s ease-out navbarFade
+        animation: .3s ease-out navbarFade
     }
 
     .hero-line {
         font-family: var(--font-montserrat);
-        text-transform: uppercase;
-        color: #fff;
+        font-size: var(--text-xl);
+        line-height: var(--tw-leading, var(--text-xl--line-height));
+        --tw-leading: var(--leading-tight);
+        line-height: var(--leading-tight);
+        --tw-font-weight: var(--font-weight-black);
+        font-weight: var(--font-weight-black);
+        --tw-tracking: -.02em;
+        letter-spacing: -.02em;
+        color: var(--color-white);
+        text-transform: uppercase
+    }
+
+    @media (min-width:48rem) {
+        .hero-line {
+            font-size: var(--text-4xl);
+            line-height: var(--tw-leading, var(--text-4xl--line-height))
+        }
+    }
+
+    .hero-line {
         opacity: 0;
-        font-weight: 900;
-        transition: opacity .6s, transform .6s;
-        transform: translateY(20px)
+        transform: translateY(12px)
     }
 
     .hero-line.show {
         opacity: 1;
-        opacity: 1;
-        transition: transform .6s ease-out, opacity .6s ease-out;
-        transform: translate(0)
+        transition: opacity .4s, transform .4s;
+        transform: translateY(0)
     }
 
     .reveal-item {
         opacity: 0;
-        transition: opacity .7s, transform .7s;
-        transform: translateY(24px)
+        transition: opacity .5s, transform .5s;
+        transform: translateY(16px)
     }
 
     .reveal-section.is-visible .reveal-item {
@@ -1300,39 +1319,45 @@
         transform: translateY(0)
     }
 
-    .reveal-section.is-visible .reveal-item:nth-child(2) {
-        transition-delay: .12s
-    }
-
-    .reveal-section.is-visible .reveal-item:nth-child(3) {
-        transition-delay: .24s
+    .will-change-transform {
+        will-change: transform
     }
 
     .lazy-img {
         opacity: 0;
-        transition: opacity .4s, transform .4s;
+        transition: opacity .3s, transform .3s;
         transform: translateY(12px)
     }
 
-    .lazy-img.loaded {
+    .lazy-img.loaded,
+    .reveal-section.is-visible .reveal-item {
         opacity: 1;
         transform: translateY(0)
     }
 
+    .reveal-section.is-visible .reveal-item:first-child {
+        transition-delay: 0s
+    }
+
+    .reveal-section.is-visible .reveal-item:nth-child(2) {
+        transition-delay: .25s
+    }
+
+    .reveal-section.is-visible .reveal-item:nth-child(3) {
+        transition-delay: .5s
+    }
+
+    .reveal-section.is-visible .reveal-item:nth-child(4) {
+        transition-delay: .75s
+    }
+
+    .reveal-section.is-visible .reveal-item:nth-child(5) {
+        transition-delay: 1s
+    }
+
     @media (max-width:768px) {
-        .hero-line {
-            transition-duration: .45s;
-            transform: translateY(14px)
-        }
-
         .reveal-item {
-            transition-duration: .6s;
-            transform: translateY(18px)
-        }
-
-        .lazy-img {
-            transition-duration: .3s;
-            transform: translateY(8px)
+            transition-duration: .9s
         }
     }
 }

@@ -6,6 +6,7 @@
 @source "../footer.html";
 @source "../assets/js/**/*.js";
 
+
 /* ================= ROOT ================= */
 :root {
     --color-primary: #0A1F44;
@@ -18,8 +19,6 @@
 
 /* ================= COMPONENTS ================= */
 @layer components {
-
-    /* NAVBAR */
     .nav-item {
         position: relative;
         padding-bottom: 4px;
@@ -32,26 +31,16 @@
 
     .nav-link::after {
         content: '';
-        position: absolute;
-        left: 50%;
-        bottom: -4px;
-        width: 0;
-        height: 2px;
-        background-color: var(--color-accent);
+        @apply absolute left-1/2 -bottom-1 w-0 h-[2px] bg-yellow-400 transition-all duration-300;
         transform: translateX(-50%);
-        transition: width 0.25s ease;
     }
 
     .nav-link:hover::after {
-        width: 100%;
+        @apply w-full;
     }
 
     .mobile-link {
-        @apply text-base tracking-wide transition-colors;
-    }
-
-    .mobile-link:hover {
-        color: var(--color-accent);
+        @apply text-base tracking-wide hover:text-yellow-400 transition-colors;
     }
 }
 
@@ -71,56 +60,44 @@
         font-family: var(--font-montserrat);
     }
 
-    /* ================= NAVBAR ANIMATION ================= */
+    /* ANIMATION */
     @keyframes navbarFade {
         from {
             opacity: 0;
-            transform: translateY(-6px);
         }
 
         to {
             opacity: 1;
-            transform: translateY(0);
         }
     }
 
-    .animate-navbar {
-        animation: navbarFade 0.25s ease-out;
+    body {
+        overflow-x: hidden;
     }
 
-    /* ================= HERO TEXT ================= */
+
+    .animate-navbar {
+        animation: navbarFade 0.3s ease-out;
+    }
+
+    /* HERO TEXT */
     .hero-line {
         font-family: var(--font-montserrat);
-        text-transform: uppercase;
-        font-weight: 900;
-        color: white;
-
+        @apply uppercase font-black text-white text-xl md:text-4xl leading-tight tracking-[-0.02em];
         opacity: 0;
-        transform: translateY(20px);
-        transition:
-            opacity 0.6s ease,
-            transform 0.6s ease;
+        transform: translateY(12px);
     }
 
     .hero-line.show {
         opacity: 1;
         transform: translateY(0);
+        transition: opacity 400ms ease, transform 400ms ease;
     }
 
-    .hero-line.show {
-        opacity: 1;
-        transform: translate3d(0, 0, 0);
-        transition: transform 600ms ease-out, opacity 600ms ease-out;
-    }
-
-
-    /* ================= REVEAL SECTION ================= */
     .reveal-item {
         opacity: 0;
-        transform: translateY(24px);
-        transition:
-            opacity 0.7s ease,
-            transform 0.7s ease;
+        transform: translateY(16px);
+        transition: opacity 500ms ease, transform 500ms ease;
     }
 
     .reveal-section.is-visible .reveal-item {
@@ -128,21 +105,16 @@
         transform: translateY(0);
     }
 
-    .reveal-section.is-visible .reveal-item:nth-child(2) {
-        transition-delay: 120ms;
+    .will-change-transform {
+        will-change: transform;
     }
 
-    .reveal-section.is-visible .reveal-item:nth-child(3) {
-        transition-delay: 240ms;
-    }
 
-    /* ================= LAZY IMAGE (OPTIMIZED) ================= */
+
     .lazy-img {
         opacity: 0;
         transform: translateY(12px);
-        transition:
-            opacity 0.4s ease,
-            transform 0.4s ease;
+        transition: opacity 300ms ease, transform 300ms ease;
     }
 
     .lazy-img.loaded {
@@ -150,22 +122,35 @@
         transform: translateY(0);
     }
 
-    /* ================= MOBILE OPTIMIZATION ================= */
+    .reveal-section.is-visible .reveal-item {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    .reveal-section.is-visible .reveal-item:nth-child(1) {
+        transition-delay: 0ms;
+    }
+
+    .reveal-section.is-visible .reveal-item:nth-child(2) {
+        transition-delay: 250ms;
+    }
+
+    .reveal-section.is-visible .reveal-item:nth-child(3) {
+        transition-delay: 500ms;
+    }
+
+    .reveal-section.is-visible .reveal-item:nth-child(4) {
+        transition-delay: 750ms;
+    }
+
+    .reveal-section.is-visible .reveal-item:nth-child(5) {
+        transition-delay: 1000ms;
+    }
+
     @media (max-width: 768px) {
-
-        .hero-line {
-            transform: translateY(14px);
-            transition-duration: 0.45s;
-        }
-
         .reveal-item {
-            transform: translateY(18px);
-            transition-duration: 0.6s;
-        }
-
-        .lazy-img {
-            transform: translateY(8px);
-            transition-duration: 0.3s;
+            transition-duration: 900ms;
         }
     }
+
 }
