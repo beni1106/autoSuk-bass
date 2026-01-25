@@ -1,0 +1,151 @@
+@import "tailwindcss";
+
+/* ================= SOURCE ================= */
+@source "../*.html";
+@source "../assets/js/**/*.js";
+
+
+/* ================= ROOT ================= */
+:root {
+    --color-primary: #0A1F44;
+    --color-accent: #D4AF37;
+
+    --font-inter: "Inter", sans-serif;
+    --font-poppins: "Poppins", sans-serif;
+    --font-montserrat: "Montserrat", sans-serif;
+}
+
+/* ================= COMPONENTS ================= */
+@layer components {
+    .nav-item {
+        position: relative;
+        padding-bottom: 4px;
+    }
+
+    .nav-link {
+        @apply relative text-black font-medium;
+        font-family: var(--font-poppins);
+    }
+
+    .nav-link::after {
+        content: '';
+        @apply absolute left-1/2 -bottom-1 w-0 h-[2px] bg-yellow-400 transition-all duration-300;
+        transform: translateX(-50%);
+    }
+
+    .nav-link:hover::after {
+        @apply w-full;
+    }
+
+    .mobile-link {
+        @apply text-base tracking-wide hover:text-yellow-400 transition-colors;
+    }
+}
+
+/* ================= UTILITIES ================= */
+@layer utilities {
+
+    /* FONT */
+    .font-inter {
+        font-family: var(--font-inter);
+    }
+
+    .font-poppins {
+        font-family: var(--font-poppins);
+    }
+
+    .font-montserrat {
+        font-family: var(--font-montserrat);
+    }
+
+    /* ANIMATION */
+    @keyframes navbarFade {
+        from {
+            opacity: 0;
+        }
+
+        to {
+            opacity: 1;
+        }
+    }
+
+    .animate-navbar {
+        animation: navbarFade 0.3s ease-out;
+    }
+
+    .will-change-transform {
+        will-change: transform;
+    }
+
+    /* HERO TEXT */
+    .hero-line {
+        font-family: var(--font-montserrat);
+        @apply uppercase font-black text-white text-xl md:text-4xl leading-tight tracking-[-0.02em] opacity-0 translate-y-6;
+    }
+
+    .hero-line.show {
+        opacity: 1;
+        transform: translate3d(0, 0, 0);
+        transition: transform 600ms ease-out, opacity 600ms ease-out;
+    }
+
+    /* REVEAL */
+    .reveal-item {
+        opacity: 0;
+        transform: translateY(36px);
+        transition:
+            opacity 1100ms ease-out,
+            transform 1100ms cubic-bezier(0.16, 1, 0.3, 1);
+        will-change: transform, opacity;
+    }
+
+    .reveal-section.is-visible .reveal-item {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    .reveal-section.is-visible .reveal-item:nth-child(1) {
+        transition-delay: 0ms;
+    }
+
+    .reveal-section.is-visible .reveal-item:nth-child(2) {
+        transition-delay: 250ms;
+    }
+
+    .reveal-section.is-visible .reveal-item:nth-child(3) {
+        transition-delay: 500ms;
+    }
+
+    .reveal-section.is-visible .reveal-item:nth-child(4) {
+        transition-delay: 750ms;
+    }
+
+    .reveal-section.is-visible .reveal-item:nth-child(5) {
+        transition-delay: 1000ms;
+    }
+
+    @media (max-width: 768px) {
+        .reveal-item {
+            transition-duration: 900ms;
+        }
+    }
+
+    /* LAZY IMAGE */
+    .lazy-img {
+        opacity: 0;
+        transform: translateY(24px) scale(0.98);
+        filter: blur(6px);
+        transition:
+            opacity 0.6s ease,
+            transform 0.6s cubic-bezier(0.16, 1, 0.3, 1),
+            filter 0.6s ease;
+        will-change: opacity, transform, filter;
+    }
+
+    .lazy-img.loaded {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+        filter: blur(0);
+    }
+
+}
