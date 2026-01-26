@@ -15,9 +15,6 @@ family=Inter:wght@400;500;600;700&
 family=Montserrat:wght@600;700;800;900&
 display=swap" rel="stylesheet">
 
-
-
-
     <!-- Tailwind Output -->
     <link rel="stylesheet" href="dist/output.css">
 </head>
@@ -26,153 +23,187 @@ display=swap" rel="stylesheet">
 
     <div id="navbar-container"></div>
 
-    <section class="relative w-full h-[45vh] overflow-hidden border-b border-black">
+    <section class="bg-blue-900 py-24 overflow-hidden reveal-section">
+        <div class="max-w-7xl mx-auto px-6 flex flex-col items-center text-center">
 
-        <div id="hero-slider" class="flex h-full transition-transform duration-[800ms] ease-in-out
-            will-change-transform transform-gpu">
+            <!-- TITLE -->
+            <h2
+                class="reveal-item mt-10 font-montserrat uppercase font-black text-white text-xl md:text-5xl leading-tight tracking-[-0.02em] mb-15">
+                Bass Opportunity
+                <span class="text-yellow-300">Preview</span>
+            </h2>
 
-            <!-- SLIDE 1 -->
-            <div class="relative min-w-full h-full">
-
-                <img src="assets/img/hero-1.webp" alt="Slide 1" class="w-full h-full object-cover" loading="eager"
-                    fetchpriority="high" decoding="async" />
-
-
-                <div class="absolute inset-0 bg-black/50"></div>
-
-                <div class="absolute inset-0 flex flex-col items-start justify-center px-8 md:px-16">
-                    <div class="hero-text">
-                        <h2 class="hero-line text-4xl mt-20" data-delay="200">AUTO SUKSES</h2>
-                        <h1 class="hero-line text-4xl" data-delay="600">Dari Momen Sederhana</h1>
-                        <p class="hero-line text-4xl" data-delay="900">Hingga Pencapaian Luar Biasa</p>
-                    </div>
-                </div>
+            <!-- LOGO -->
+            <div class="reveal-item mb-15">
+                <img src="assets/img/logo.png" alt="Logo PT BASS" class="w-48 md:w-64 mx-auto" loading="lazy"
+                    decoding="async">
             </div>
 
-            <!-- SLIDE 2 -->
-            <div class="relative min-w-full h-full">
-
-                <img src="assets/img/hero-2.webp" alt="Bisnis AutoSukses" class="w-full h-full object-cover"
-                    loading="lazy" decoding="async" />
-
-                <div class="absolute inset-0 bg-black/50"></div>
-
-                <div class="absolute inset-0 flex flex-col items-center justify-end text-center px-4 pb-20">
-                    <div class="hero-text">
-                        <h1 class="hero-line" data-delay="200">Marketing Plan</h1>
-                        <p class="hero-line" data-delay="600">Langkah Menuju Pencapaian Terbaik</p>
-                    </div>
-                </div>
-            </div>
-
-            <!-- SLIDE 3 -->
-            <div class="relative min-w-full h-full">
-
-                <img src="assets/img/hero-3.webp" alt="Komunitas Member" class="w-full h-full object-cover"
-                    loading="lazy" decoding="async" />
-
-                <div class="absolute inset-0 bg-black/50"></div>
-
-                <div class="absolute inset-0 flex flex-col items-start justify-center px-8">
-                    <div class="hero-text">
-                        <h1 class="hero-line" data-delay="200">PT. BASS HADIR</h1>
-                        <p class="hero-line" data-delay="600">Mendukung Pertumbuhan</p>
-                        <p class="hero-line" data-delay="900">Pencapaian Terbaik Anda</p>
-                    </div>
-                </div>
-            </div>
-
-        </div>
-
-        <!-- NAVIGATION -->
-        <button id="hero-prev"
-            class="absolute left-4 top-1/2 -translate-y-1/2 bg-black/30 hover:bg-black/50 text-white p-3 rounded-full">
-            ❮
-        </button>
-
-        <button id="hero-next"
-            class="absolute right-4 top-1/2 -translate-y-1/2 bg-black/30 hover:bg-black/50 text-white p-3 rounded-full">
-            ❯
-        </button>
-    </section>
-
-
-    <section class="bg-blue-900 py-20 overflow-hidden reveal-section">
-        <div class="max-w-7xl mx-auto px-6 grid lg:grid-cols-2 gap-16 items-center">
-
-            <!-- IMAGE -->
-            <div class="reveal-item">
-                <img src="assets/img/handshake.webp" alt="Kemitraan dan Kepercayaan PT BASS"
-                    class="w-full h-[420px] object-cover border-3 border-yellow-500 bg-black/100 lazy-img"
-                    loading="lazy" decoding="async" width="1200" height="420" />
-
-            </div>
-
-            <!-- TEXT -->
-            <div>
-                <h2
-                    class="reveal-item font-montserrat uppercase font-black text-white text-xl md:text-4xl leading-tight tracking-[-0.02em] mb-4">
-                    Kemitraan yang Dibangun
-                    <span class="text-yellow-500">Atas Kepercayaan</span>
-                </h2>
-
-                <p class="reveal-item font-inter text-white text-md leading-relaxed mb-4">
-                    PT Berkah Auto Sukses Sejahtera membangun hubungan jangka panjang
-                    dengan mitra melalui sistem bisnis yang transparan.
-                </p>
-
-                <p class="reveal-item font-inter text-white text-md leading-relaxed mb-4">
-                    Kami percaya keberhasilan tidak dibangun sendiri,
-                    melainkan melalui kolaborasi dan komitmen bersama.
-                </p>
-
-                <p class="reveal-item font-inter text-white text-md leading-relaxed">
-                    Sistem bisnis dapat dijalankan secara offline maupun online
-                    oleh siapa saja dari berbagai latar belakang.
-                </p>
+            <!-- LINE -->
+            <div class="reveal-item w-80 md:w-[420px] h-[5px] mx-auto rounded-full
+         bg-gradient-to-r from-yellow-400 via-yellow-300 to-yellow-400 mb-15">
             </div>
 
         </div>
     </section>
 
+    <section class="bg-blue-900 py-24 overflow-hidden reveal-section">
+        <div class="max-w-7xl mx-auto px-6">
+
+            <h2 class="reveal-item text-center font-montserrat uppercase font-black
+                   text-white text-xl md:text-4xl
+                   leading-tight tracking-[-0.02em] mb-16">
+                Penghasilan
+                <span class="text-yellow-500">vs Kebutuhan</span>
+            </h2>
+
+            <!-- CONTENT -->
+            <div class="grid lg:grid-cols-2 gap-16 items-center">
+
+                <!-- IMAGE  -->
+                <div class="reveal-item">
+                    <img src="assets/img/kebutuhan.png" alt="Penghasilan vs Kebutuhan" class="w-full max-w-xl h-[420px] object-cover
+                           border-3 border-yellow-500 bg-black/100 lazy-img mx-auto" loading="lazy" decoding="async"
+                        width="1200" height="420" />
+                </div>
+
+                <!-- TEXT  -->
+                <div class="reveal-item text-left">
+                    <p class="font-poppins text-white text-md leading-relaxed mb-4">
+                        Banyak orang bekerja keras namun tetap merasa penghasilannya
+                        tidak pernah cukup untuk memenuhi kebutuhan hidup.
+                    </p>
+
+                    <p class="font-poppins text-white text-md leading-relaxed mb-4">
+                        Kebutuhan terus bertambah seiring waktu, sementara penghasilan
+                        sering kali tidak mengalami peningkatan yang signifikan.
+                    </p>
+
+                    <p class="font-poppins text-white text-md leading-relaxed">
+                        Kondisi inilah yang mendorong pentingnya memiliki sistem
+                        penghasilan tambahan yang berkelanjutan.
+                    </p>
+                </div>
+
+            </div>
+        </div>
+    </section>
     <section class="bg-blue-900 py-20 overflow-hidden reveal-section">
-        <div class="max-w-7xl mx-auto px-6 grid lg:grid-cols-2 gap-16 items-center">
+        <div class="max-w-7xl mx-auto px-6">
 
-            <!-- TEXT -->
-            <div>
-                <h2
-                    class="reveal-item font-montserrat uppercase font-black text-white text-xl md:text-4xl leading-tight tracking-[-0.02em] mb-4">
-                    Sistem Kemitraan PT BASS
-                    <span class="text-yellow-500">Transparan & Terukur</span>
-                </h2>
+            <!-- JUDUL -->
+            <h2
+                class="reveal-item text-center font-montserrat uppercase font-black text-white text-xl md:text-4xl leading-tight tracking-[-0.02em] mb-12">
+                Passive Income
+            </h2>
 
-                <p class="reveal-item font-inter text-white text-md leading-relaxed mb-6">
-                    Sebagai perusahaan direct selling, PT Berkah Auto Sukses Sejahtera
-                    berkomitmen membangun hubungan jangka panjang dengan mitra
-                    melalui sistem bisnis yang saling menguntungkan.
-                </p>
+            <!-- KONTEN -->
+            <div class="grid lg:grid-cols-2 gap-16 items-center">
 
-                <p class="reveal-item font-inter text-white text-md leading-relaxed mb-4">
-                    PT BASS tidak hanya fokus pada pertumbuhan jaringan,
-                    tetapi juga pada pengembangan kualitas sumber daya manusia
-                    melalui edukasi, pelatihan, dan pendampingan yang konsisten.
-                </p>
+                <!-- TEXT -->
+                <div>
+                    <p class="reveal-item font-poppins text-white text-md leading-relaxed mb-6">
+                        <span class="font-poppins font-bold">Tidak Kerja :</span>Bayangkan hidup tanpa harus bekerja
+                        setiap
+                        hari.Waktu lebih
+                        banyak untuk keluarga, hobi, dan kebahagiaan.
+                    </p>
 
-                <p class="reveal-item font-inter text-white text-md leading-relaxed">
-                    Dengan produk berkualitas dan skema reward yang jelas,
-                    PT BASS membuka peluang usaha yang berkelanjutan
-                    bagi mitra yang memiliki komitmen dan semangat bertumbuh.
-                </p>
+                    <p class="reveal-item font-poppins text-white text-md leading-relaxed mb-4">
+                        <span class="font-poppins font-bold">Ada Aset :</span>Kuncinya adalah memiliki aset. Bisa
+                        berupa properti, saham, bisnis digital, atau investasi lain
+                        yang terus berjalan meski kamu tidak hadir.
+                    </p>
+
+                    <p class="reveal-item font-poppins text-white text-md leading-relaxed">
+                        <span class="font-poppins font-bold">Ada Uang :</span>Dari aset itulah uang mengalir secara
+                        otomatis. Tanpa kerja aktif, penghasilan tetap masuk,
+                        memberi kebebasan finansial dan ketenangan hidup
+                    </p>
+                </div>
+
+                <!-- IMAGE -->
+                <div class="reveal-item">
+                    <img src="assets/img/passive.png" alt="Kemitraan dan Kepercayaan PT BASS"
+                        class="w-full h-[420px] object-cover object-top border-3 border-yellow-500 bg-black lazy-img"
+                        loading="lazy" decoding="async" width="1200" height="420" />
+                </div>
 
             </div>
+        </div>
+    </section>
 
-            <!-- IMAGE -->
-            <div class="reveal-item">
-                <img src="assets/img/working-together.webp" alt="Kemitraan dan Kepercayaan PT BASS"
-                    class="w-full h-[420px] object-cover border-3 border-yellow-500 bg-black/100 lazy-img"
-                    loading="lazy" decoding="async" width="1200" height="420" />
+    <section class="bg-blue-900 py-24 reveal-section">
+        <div class="max-w-7xl mx-auto px-6">
+
+            <h2 class="reveal-item font-montserrat text-center font-black uppercase
+                   text-white text-2xl md:text-4xl mb-16">
+                3 Pilihan Membangun Aset
+            </h2>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-10">
+
+                <!-- KONVENSIONAL -->
+                <div class="reveal-item relative bg-gradient-to-b from-yellow-500 to-yellow-300
+                        p-8 rounded-xl shadow-2xl">
+                    <span class="absolute -top-5 -right-5 w-12 h-12 bg-white text-yellow-400
+                           font-bold flex items-center justify-center rounded-full">
+                        1
+                    </span>
+
+                    <h3 class="font-montserrat font-black text-xl text-white uppercase text-center mb-8">
+                        Konvensional
+                    </h3>
+
+                    <ul class="space-y-4 font-poppins text-lg text-white">
+                        <li>Modal <b>BESAR</b></li>
+                        <li>Resiko <b>BESAR</b></li>
+                        <li>Waktu <b>LAMA</b></li>
+                        <li>Sistem <b>BANGUN</b></li>
+                    </ul>
+                </div>
+
+                <!-- WARALABA -->
+                <div class="reveal-item relative bg-gradient-to-b from-yellow-300 to-yellow-500
+                        p-8 rounded-xl shadow-2xl text-black">
+                    <span class="absolute -top-5 -right-5 w-12 h-12 bg-white text-yellow-400
+                           font-bold flex items-center justify-center rounded-full">
+                        2
+                    </span>
+
+                    <h3 class="font-montserrat text-white font-black text-xl uppercase text-center mb-8">
+                        Waralaba
+                    </h3>
+
+                    <ul class="space-y-4 font-poppins text-lg text-white">
+                        <li>Modal <b>BESAR</b></li>
+                        <li>Resiko <b>BESAR</b></li>
+                        <li>Waktu <b>LAMA</b></li>
+                        <li>Sistem <b>MEMBELI</b></li>
+                    </ul>
+                </div>
+
+                <!-- NETWORK MARKETING -->
+                <div class="reveal-item relative bg-gradient-to-b from-yellow-500 to-yellow-300
+                        p-8 rounded-xl shadow-2xl text-white">
+                    <span class="absolute -top-5 -right-5 w-12 h-12 bg-white text-yellow-400
+                           font-bold flex items-center justify-center rounded-full">
+                        3
+                    </span>
+
+                    <h3 class="font-montserrat font-black text-xl uppercase text-center mb-8">
+                        Network Marketing
+                    </h3>
+
+                    <ul class="space-y-4 font-poppins text-lg">
+                        <li>Modal <b>KECIL</b></li>
+                        <li>Resiko <b>TIDAK ADA</b></li>
+                        <li>Waktu <b>CEPAT</b></li>
+                        <li>Sistem <b>TERSEDIA</b></li>
+                    </ul>
+                </div>
+
             </div>
-
         </div>
     </section>
 

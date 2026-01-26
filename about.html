@@ -2,130 +2,240 @@
 <html lang="id">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PT BASS</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tentang Perusahaan | PT BASS</title>
 
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?
-family=Poppins:wght@400;500;600;700;800&
-family=Inter:wght@400;500;600;700&
-family=Montserrat:wght@600;700;800;900&
-display=swap" rel="stylesheet">
+    <!-- GOOGLE FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&family=Montserrat:wght@600;700;800;900&display=swap"
+        rel="stylesheet" />
 
+    <!-- TAILWIND OUTPUT -->
+    <link rel="stylesheet" href="dist/output.css" />
 
-    <!-- Tailwind Output -->
-    <link rel="stylesheet" href="dist/output.css">
+    <!-- AOS CSS -->
+    <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
 </head>
 
-<body>
+<body class="bg-blue-900 overflow-x-hidden scroll-smooth">
 
+    <!-- NAVBAR -->
     <div id="navbar-container"></div>
 
-    <section class="reveal-section is-visible py-15 bg-blue-900">
+    <!-- PAGE TITLE -->
+    <section class="bg-blue-900 pt-28 pb-20">
 
-        <div class="max-w-4xl mx-auto text-center px-6 pt-25">
-            <h2
-                class="reveal-item font-montserrat uppercase font-black text-yellow-500 text-xl md:text-3xl leading-tight tracking-[-0.02em] mb-4">
-                PT. BERKAH AUTO SUKSES SEJAHTERA <span class="text-white"> (PT.BASS)</span>
-            </h2>
-            <p class="reveal-item font-inter text-white text-md leading-relaxed mb-6">
-                Sebuah perusahaan yang bergerak di bidang penjualan langsung dengan Market Plan sederhana, mudah, aman
-                dan saling menguntungkan antara member dan perusahaan.
-                Manajemen PT. BASS adalah orang yang telah berpengalaman selama puluhan tahun dan sukses di bidangnya,
-                sehingga sangat tahu apa yang dibutuhkan pelaku network marketing baik dari segi perusahaan, produk,
-                marketing plan dan support system.
-            </p>
-        </div>
-    </section>
-    <section class="reveal-section is-visible py-20 bg-blue-900">
         <div class="max-w-6xl mx-auto px-6">
-            <!-- HEADING -->
-            <div class="text-center mb-12">
-                <span
-                    class="reveal-item font-montserrat uppercase font-black text-yellow-500 text-xl md:text-3xl leading-tight tracking-[-0.02em]">
-                    Motto
-                </span>
-                <h2
-                    class="reveal-item font-montserrat uppercase font-black text-white text-xl md:text-3xl leading-tight tracking-[-0.02em]">
-                    Cari Berkah Auto Sukses
-                </h2>
+
+            <!-- JUDUL -->
+            <div class="text-center mb-14">
+                <h1 data-aos="fade-up" data-aos-delay="150"
+                    class="font-montserrat uppercase font-black text-white text-2xl md:text-5xl leading-tight">
+                    Profile Perusahaan
+                </h1>
             </div>
-            <div class="grid md:grid-cols-2 gap-10">
-                <p class="reveal-item font-inter text-white text-md leading-relaxed">
-                    <span class="font-semibold">Visi : </span> Sebuah perusahaan yang bergerak di bidang penjualan
-                    langsung dengan market plan yang sederhana,
-                    mudah dijalankan, aman, serta saling menguntungkan antara member dan perusahaan.
-                    PT. BASS hadir untuk memberikan peluang usaha yang realistis dan berkelanjutan.
-                </p>
-                <p class="reveal-item font-inter text-white text-md leading-relaxed">
-                    <span class="font-semibold">Misi : </span>Manajemen PT. BASS didukung oleh tim profesional yang
-                    telah
-                    berpengalaman puluhan tahun dan sukses
-                    di bidangnya. Kami memahami kebutuhan pelaku network marketing dari sisi perusahaan, produk,
-                    sistem pemasaran, hingga support system yang kuat dan konsisten.
-                </p>
+
+            <!-- KONTEN -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+
+                <!-- IMAGE (DI ATAS SAAT MOBILE) -->
+                <div data-aos="zoom-in" data-aos-delay="200" class="flex justify-center md:justify-end
+                       order-1 md:order-2">
+                    <div class="w-full max-w-md overflow-hidden border-3 border-black shadow-lg">
+                        <img src="assets/img/profile.webp" alt="Profil PT BASS"
+                            class="w-full h-full object-cover scale-110" />
+                    </div>
+                </div>
+
+                <!-- TEXT -->
+                <div class="text-center md:text-left
+                        order-2 md:order-1">
+
+                    <!-- INFO -->
+                    <div data-aos="fade-right" data-aos-delay="150" class="space-y-2 font-poppins text-white mb-6">
+
+                        <div class="flex justify-center md:justify-start gap-3">
+                            <span class="w-20">CEO</span>
+                            <span>:</span>
+                            <span class="text-yellow-400 font-semibold">
+                                Hamsul Hasan
+                            </span>
+                        </div>
+
+                        <div class="flex justify-center md:justify-start gap-3">
+                            <span class="w-20">Owner</span>
+                            <span>:</span>
+                            <span class="text-yellow-400 font-semibold">
+                                Mina Muin
+                            </span>
+                        </div>
+                    </div>
+
+                    <!-- DESKRIPSI -->
+                    <p data-aos="fade-right" data-aos-delay="300" class="font-poppins text-white leading-relaxed mb-8">
+                        Sepasang suami-istri yang merupakan sosok berpengalaman puluhan tahun
+                        di bidang Network Marketing. Telah 4x menjadi Top Income di berbagai
+                        perusahaan partnership dan pada perusahaan terakhir masing-masing
+                        meraih reward tertinggi senilai 2 Milyar rupiah.
+                    </p>
+
+                    <!-- CTA -->
+                    <div data-aos="fade-up" data-aos-delay="450" class="flex justify-center md:justify-start">
+                        <a href="#produk-terjual" class="inline-flex items-center justify-center px-8 py-3
+                               bg-yellow-400 text-white font-poppins font-bold
+                               uppercase tracking-wide rounded
+                               hover:bg-yellow-300 transition duration-300">
+                            Lihat Produk
+                        </a>
+                    </div>
+
+                </div>
+
             </div>
+
         </div>
+
     </section>
 
-    <section id="legalitas" class="py-20 bg-blue-900">
+    <section id="produk-terjual" class="py-20 bg-blue-900">
         <div class="max-w-7xl mx-auto px-6">
-            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-                <div class="flex justify-center">
-                    <img src="assets/img/serti.jpg" alt="Sertifikat Keanggotaan AP2LI PT Berkah Auto Sukses Sejahtera"
-                        class="max-w-full rounded-xl shadow-lg hover:scale-105 transition duration-300" />
+
+            <!-- JUDUL -->
+            <h2 data-aos="fade-up"
+                class="text-center font-montserrat uppercase font-black text-white text-2xl md:text-4xl mb-12">
+                Pilihan Roduk Lengkap
+            </h2>
+
+            <!-- CONTAINER 1: 4 ITEM -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8 mb-8">
+                <!-- Produk 1 -->
+                <div data-aos="zoom-in">
+                    <div class="w-full h-60 overflow-hidden border-3 border-black shadow-lg">
+                        <img src="assets/img/Produk_BioVIT.webp" alt="Produk 1" class="w-full h-full object-cover" />
+                    </div>
                 </div>
-                <div>
-                    <h2
-                        class="font-montserrat uppercase font-black text-white text-xl md:text-3xl leading-tight tracking-[-0.02em] mb-4">
-                        DOKUMEN LEGALITAS PERUSAHAAN
-                    </h2>
-                    <p class="font-inter text-white mb-8 leading-relaxed">
-                        PT BASS adalah perusahaan yang sudah legal, berikut adalah
-                        informasi legalitas kami:
-                    </p>
-                    <div class="space-y-4 text-white font-inter">
-                        <p>
-                            <span class="font-inter font-semibold">AKTA PENDIRIAN:</span>
-                            No.04, 17 Januari 2023 – Notaris: MARDIANA KADIR, SH
-                        </p>
-                        <p>
-                            <span class="font-inter font-semibold">
-                                KEMENTERIAN HUKUM DAN HAM (KEMENKUMHAM):
-                            </span>
-                            4808.AH.01.01 TAHUN 2023
-                        </p>
-                        <p>
-                            <span class="font-inter font-semibold">
-                                Jenis Barang/Jasa/Dagangan Utama:
-                            </span>
-                            KBLI 47999 Perdagangan eceran bukan di toko, kios, kaki lima
-                            dan los pasar lainnya (YTDL)
-                        </p>
-                        <p>
-                            <span class="font-inter font-semibold">NPWP:</span>
-                            62.522.391.2-805.000
-                            <br />
-                            PERUSAHAAN PT. BERKAH AUTO SUKSES SEJAHTERA
-                        </p>
-                        <p>
-                            <span class="font-inter font-semibold">
-                                SERTIFIKAT KEANGGOTAAN AP2LI:
-                            </span>
-                            273/AP2LI/DN/II/2023
-                        </p>
+
+                <!-- Produk 2 -->
+                <div data-aos="zoom-in" data-aos-delay="100">
+                    <div class="w-full h-60 overflow-hidden border-3 border-black shadow-lg">
+                        <img src="assets/img/Produk_Kopi_Dongkrak.webp" alt="Produk 2"
+                            class="w-full h-full object-cover" style="object-position: center 65%;" />
+                    </div>
+                </div>
+
+                <!-- Produk 3 -->
+                <div data-aos="zoom-in" data-aos-delay="200">
+                    <div class="w-full h-60 overflow-hidden border-3 border-black shadow-lg">
+                        <img src="assets/img/Produk_BioLIFE.webp" alt="Produk 3" class="w-full h-full object-cover" />
+                    </div>
+                </div>
+
+                <!-- Produk 4 -->
+                <div data-aos="zoom-in" data-aos-delay="300">
+                    <div class="w-full h-60 overflow-hidden border-3 border-black shadow-lg">
+                        <img src="assets/img/Produk_Gilcam_Propolis.webp" alt="Produk 4"
+                            class="w-full h-full object-cover" style="object-position: center 65%;" />
                     </div>
                 </div>
             </div>
+
+            <!-- CONTAINER 2: 3 ITEM -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
+                <!-- Produk 5 -->
+                <div data-aos="zoom-in" data-aos-delay="400">
+                    <div class="w-full h-60 overflow-hidden border-3 border-black shadow-lg">
+                        <img src="assets/img/Produk_Eikana.webp" alt="Produk 5" class="w-full h-full object-cover"
+                            style="object-position: center 65%;" />
+                    </div>
+                </div>
+
+                <!-- Produk 6 -->
+                <div data-aos="zoom-in" data-aos-delay="500">
+                    <div class="w-full h-60 overflow-hidden border-3 border-black shadow-lg">
+                        <img src="assets/img/Produk_Ordinate.webp" alt="Produk 6" class="w-full h-full object-cover"
+                            style="object-position: center 65%;" />
+                    </div>
+                </div>
+
+                <!-- Produk 7 -->
+                <div data-aos="zoom-in" data-aos-delay="600">
+                    <div class="w-full h-60 overflow-hidden border-3 border-black shadow-lg">
+                        <img src="assets/img/Produk_Botani.webp" alt="Produk 7" class="w-full h-full object-cover"
+                            style="object-position: center 70%;" />
+                    </div>
+                </div>
+
+
+            </div>
+            <!-- CTA BUTTON -->
+            <div data-aos="fade-up" data-aos-delay="700" class="flex justify-center pt-10">
+                <a href="#legalitas" class="inline-flex items-center justify-center px-8 py-3
+               bg-yellow-400 text-white font-poppins font-bold
+               uppercase tracking-wide rounded
+               hover:bg-yellow-300 transition duration-300">
+                    Lihat Legalitas
+                </a>
+            </div>
+
         </div>
     </section>
 
+
+
+    <!-- LEGALITAS -->
+    <section id="legalitas" class="py-20 bg-blue-900 ">
+        <div class="max-w-7xl mx-auto px-6">
+
+            <!-- JUDUL -->
+            <h2 data-aos="fade-up"
+                class="text-center font-montserrat uppercase font-black text-white text-2xl md:text-4xl mb-12">
+                LEGALITAS PERUSAHAAN
+            </h2>
+
+            <!-- FOTO GRID -->
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+
+                <!-- FOTO 1 -->
+                <div data-aos="zoom-in" class="flex justify-center">
+                    <div class="w-full max-w-md h-80 overflow-hidden border-3 border-black shadow-lg">
+                        <img src="assets/img/serti.jpg" alt="Dokumen Legalitas PT BASS 1"
+                            class="w-full h-full object-cover" />
+                    </div>
+                </div>
+
+                <!-- FOTO 2 -->
+                <div data-aos="zoom-in" class="flex justify-center">
+                    <div class="w-full max-w-md h-80 overflow-hidden border-3 border-black shadow-lg">
+                        <img src="assets/img/legalitas.jpg" alt="Dokumen Legalitas PT BASS 2"
+                            class="w-full h-full object-cover" />
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+    <!-- FOOTER -->
     <div id="footer-container"></div>
 
+    <!-- AOS JS -->
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 900,
+            easing: 'ease-out-cubic',
+            once: true,
+            offset: 120
+        });
+    </script>
+
+    <!-- MAIN JS -->
     <script src="assets/js/main.js" defer></script>
+    <script src="assets/js/about.js" defer></script>
 </body>
 
 </html>
