@@ -1,4 +1,4 @@
-const images = Array.from({ length: 19 }, (_, i) =>
+const images = Array.from({ length: 16 }, (_, i) =>
     `assets/images-marketing/${i + 1}.webp`
 );
 
