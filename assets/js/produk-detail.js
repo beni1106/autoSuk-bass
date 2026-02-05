@@ -179,64 +179,74 @@ const container = document.getElementById("produk-detail");
 
 if (!produk) {
     container.innerHTML = `
-        <h1 class="text-3xl font-bold font-inter text-white">
-            Produk tidak ditemukan
-        </h1>
-    `;
+    <h1 class="text-3xl font-bold font-poppins text-black">
+      Produk tidak ditemukan
+    </h1>
+  `;
 } else {
     container.innerHTML = `
-        <h1 class="reveal-item font-montserrat uppercase font-black text-white text-xl md:text-4xl leading-tight tracking-[-0.02em] mb-4">${produk.title}</h1>
+    <h1 class="reveal-item font-poppins uppercase font-extrabold text-black text-xl md:text-4xl leading-tight tracking-[-0.02em] mb-4">
+      ${produk.title}
+    </h1>
 
-        <img src="assets/img/${produk.image}"
-             class="mx-auto max-h-96 object-contain"
-             alt="${produk.title}">
+    <img src="assets/img/${produk.image}"
+         class="mx-auto max-h-96 object-contain mb-6"
+         alt="${produk.title}">
 
-        <p class="text-white font-inter font-medium">
-            ${produk.description}
-        </p>
+    <p class="text-black font-poppins font-medium mb-6">
+      ${produk.description}
+    </p>
 
-        ${produk.memiliki4jenis ? `
-            <div class="text-left text-white">
-                <h2 class="text-xl font-semibold mb-2 text-white">Jenis Produk</h2>
-                <ul class="list-disc list-inside">
-                    ${produk.memiliki4jenis.map(i => `<li>${i}</li>`).join("")}
-                </ul>
-            </div>
-        ` : ""}
-
-        ${produk.manfaat ? `
-            <div class="text-left text-white">
-                <h2 class="text-xl font-inter mb-2 text-white">Manfaat</h2>
-                <ul class="list-disc list-inside">
-                    ${produk.manfaat.map(i => `<li>${i}</li>`).join("")}
-                </ul>
-            </div>
-        ` : ""}
-        ${produk.manfaatPria ? `
-    <div class="text-left text-white mt-6">
-        <h2 class="text-xl font-inter font-md mb-2 text-white">
-            Manfaat untuk Pria
+    ${produk.memiliki4jenis ? `
+      <div class="text-left text-black font-poppins mb-6">
+        <h2 class="text-xl font-poppins font-bold mb-2 text-black">
+          Jenis Produk
         </h2>
-        <ul class="list-disc list-inside text-white">
-            ${produk.manfaatPria.map(i => `<li>${i}</li>`).join("")}
+        <ul class="list-disc list-inside">
+          ${produk.memiliki4jenis.map(i => `<li>${i}</li>`).join("")}
         </ul>
-    </div>
-` : ""}
-${produk.manfaatWanita ? `
-    <div class="text-left text-white mt-6">
-        <h2 class="text-xl font-inter font-md mb-2 text-white">
-            Manfaat untuk Wanita
+      </div>
+    ` : ""}
+
+    ${produk.manfaat ? `
+      <div class="text-left text-black font-poppins mb-6">
+        <h2 class="text-xl font-poppins font-bold mb-2 text-black">
+          Manfaat
         </h2>
-        <ul class="list-disc list-inside text-white">
-            ${produk.manfaatWanita.map(i => `<li>${i}</li>`).join("")}
+        <ul class="list-disc list-inside">
+          ${produk.manfaat.map(i => `<li>${i}</li>`).join("")}
         </ul>
+      </div>
+    ` : ""}
+
+    ${produk.manfaatPria ? `
+      <div class="text-left text-black font-poppins mb-6">
+        <h2 class="text-xl font-poppins font-bold mb-2 text-black">
+          Manfaat untuk Pria
+        </h2>
+        <ul class="list-disc list-inside">
+          ${produk.manfaatPria.map(i => `<li>${i}</li>`).join("")}
+        </ul>
+      </div>
+    ` : ""}
+
+    ${produk.manfaatWanita ? `
+      <div class="text-left text-black font-poppins mb-6">
+        <h2 class="text-xl font-poppins font-bold mb-2 text-black">
+          Manfaat untuk Wanita
+        </h2>
+        <ul class="list-disc list-inside">
+          ${produk.manfaatWanita.map(i => `<li>${i}</li>`).join("")}
+        </ul>
+      </div>
+    ` : ""}
+
+    <div class="flex flex-col md:flex-row justify-center gap-4 md:gap-8 font-poppins font-bold text-black mt-8">
+      ${produk.hargaDist ? `<p>Distributor: ${produk.hargaDist}</p>` : ""}
+      ${produk.hargaKons ? `<p>Konsumen: ${produk.hargaKons}</p>` : ""}
     </div>
-` : ""}
-
-
-        <div class="flex justify-center gap-8 font-bold">
-            ${produk.hargaDist ? `<p>Distributor: ${produk.hargaDist}</p>` : ""}
-            ${produk.hargaKons ? `<p>Konsumen: ${produk.hargaKons}</p>` : ""}
-        </div>
-    `;
+  `;
 }
+
+
+

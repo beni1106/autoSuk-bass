@@ -28,13 +28,13 @@ produkList.forEach((produk, index) => {
             />
         </div>
 
-        <h3 class="mt-5 text-white font-inter text-md font-semibold">
+        <h3 class="mt-5 text-black font-poppins text-md font-semibold">
             ${produk.title}
         </h3>
 
         <a
             href="./produk-detail.html?slug=${produk.slug}"
-            class="mt-4 px-4 py-2 bg-yellow-500 text-white font-inter rounded-lg "
+            class="mt-4 px-4 py-2 bg-amber-400 text-black font-poppins rounded-lg "
         >
             Lihat Detail
         </a>
